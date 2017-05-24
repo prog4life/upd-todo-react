@@ -1,0 +1,4 @@
+# Ignore webpack's output "bundle.js" file
+public/bundle.js
+
+npm-debug.log

@@ -1,0 +1,109 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "globalReturn": false,
+      "impliedStrict": false,
+      "jsx": true,
+      "experimentalObjectRestSpread": false
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": false,
+    "es6": true,
+    "jquery": true,
+    "commonjs": true,
+    "mocha": true
+  },
+  "root": true,
+  "globals": {
+      "window": false,
+      "document": false,
+      "console": false,
+      "alert": false,
+      "process": false,
+      "__dirname": false
+  },
+  "extends": "eslint:all",
+  "rules": {
+    "arrow-body-style": [1],
+    "brace-style": ["error", "1tbs", { "allowSingleLine": false }],
+    "capitalized-comments": "off",
+    "callback-return": ["error", ["callback", "cb"]],
+    "consistent-return": ["warn", { "treatUndefinedAsUnspecified": true }],
+    "dot-location": ["warn", "property"],
+    "func-style": ["off", "expression"],
+    "func-names": ["off", "as-needed"],
+    "id-length": "warn",
+    "indent": ["warn", 2],
+    "linebreak-style": ["off", "unix"],
+    "line-comment-position": ["off", { "position": "above" }],
+    "max-params": ["warn", 3],
+    "max-statements": [1, 10, { "ignoreTopLevelFunctions": true }],
+    "newline-after-var": ["warn"],
+    "newline-before-return": "off",
+    "no-alert": 1,
+    "no-console": [0],
+    "no-debugger": "off",
+    "no-extra-parens": ["error", "all", {
+      "conditionalAssign": true,
+      "returnAssign": false,
+      "nestedBinaryExpressions": false,
+      "ignoreJSX": "all"
+    }],
+    "no-implicit-globals": ["warn"],
+    "no-inline-comments": "off",
+    "no-magic-numbers": [0],
+    "no-process-env": 0,
+    "no-shadow": ["warn", {
+      "hoist": "functions",
+      "allow": ["err", "error", "cb", "callback"]
+    }],
+    "no-ternary": "warn",
+    "no-trailing-spaces": "warn",
+    "no-undef": ["error"],
+    "no-undefined": 1,
+    "no-unused-vars": "warn",
+    "no-use-before-define": ["error", { "functions": false, "classes": true }],
+    "no-var": [0],
+    "no-warning-comments": ["off", {
+      "terms": ["todo", "fixme", "xxx"],
+      "location": "start"
+    }],
+    "object-curly-newline": ["off", {
+      "ObjectExpression": "always",
+      "ObjectPattern": "never"
+    }],
+    "object-shorthand": "off",
+    "one-var": [0],
+    "padded-blocks": 0,
+    "prefer-arrow-callback": "off",
+    "prefer-const": ["off"],
+    "prefer-destructuring": 0,
+    "prefer-template": 1,
+    "quotes": [1, "single", {
+      "avoidEscape": true,
+      "allowTemplateLiterals": true
+    }],
+    "quote-props": ["warn", "as-needed"],
+    "require-jsdoc": [0, {
+      "require": {
+        "FunctionDeclaration": true,
+        "MethodDefinition": true,
+        "ClassDeclaration": false,
+        "ArrowFunctionExpression": false
+      }
+    }],
+    "semi": 2,
+    "sort-keys": "off",
+    "space-before-function-paren": ["warn", {
+      "anonymous": "always",
+      "named": "never",
+      "asyncArrow": "always"
+    }],
+    "strict": "warn",
+    "vars-on-top": "off"
+  }
+}

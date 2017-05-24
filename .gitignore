@@ -1,0 +1,12 @@
+# Dependency directories
+node_modules/
+bower_components/
+
+# Directories anywhere:
+**/.idea/
+
+# Individual files
+public/bundle.js
+# .eslintrc.json
+# .eslintignore
+npm-debug.log
