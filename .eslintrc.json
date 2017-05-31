@@ -43,6 +43,7 @@
     "max-len": ["off"],
     "max-params": ["warn", 3],
     "max-statements": [1, 10, { "ignoreTopLevelFunctions": true }],
+    "multiline-ternary": "off",
     "newline-after-var": ["warn"],
     "newline-before-return": "off",
     "no-alert": 1,
@@ -62,7 +63,7 @@
       "hoist": "functions",
       "allow": ["err", "error", "cb", "callback"]
     }],
-    "no-ternary": "warn",
+    "no-ternary": "off",
     "no-trailing-spaces": "warn",
     "no-undef": ["error"],
     "no-undefined": 1,
