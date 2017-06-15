@@ -10,7 +10,7 @@ var TodoAPI = require('TodoAPI');
 var TodoApp = React.createClass({
   getInitialState: function () {
     return {
-      searchCompleted: false,
+      showCompleted: false,
       searchText: '',
       todos: TodoAPI.getTodos()
     };
