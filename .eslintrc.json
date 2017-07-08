@@ -29,6 +29,7 @@
   "extends": "eslint:all",
   "rules": {
     "arrow-body-style": [1],
+    "arrow-parens": ["warn"],
     "brace-style": ["error", "1tbs", { "allowSingleLine": false }],
     "capitalized-comments": "off",
     "callback-return": ["error", ["callback", "cb"]],
@@ -37,7 +38,9 @@
     "func-style": ["off", "expression"],
     "func-names": ["off", "as-needed"],
     "id-length": "off",
-    "indent": ["warn", 2],
+    "indent": ["warn", 2, {
+      "SwitchCase": 1
+    }],
     "linebreak-style": ["off", "unix"],
     "line-comment-position": ["off", { "position": "above" }],
     "max-len": ["off"],
@@ -58,6 +61,8 @@
     "no-implicit-globals": ["warn"],
     "no-inline-comments": "off",
     "no-magic-numbers": [0],
+    "no-multi-spaces": "warn",
+    "no-plusplus": ["off"],
     "no-process-env": 0,
     "no-shadow": ["warn", {
       "hoist": "functions",
@@ -68,7 +73,11 @@
     "no-undef": ["error"],
     "no-undefined": 1,
     "no-unused-vars": "warn",
-    "no-use-before-define": ["error", { "functions": false, "classes": true }],
+    "no-use-before-define": ["error", {
+      "functions": false,
+      "classes": true,
+      "variables": false  // default: true
+    }],
     "no-var": [0],
     "no-warning-comments": ["off", {
       "terms": ["todo", "fixme", "xxx"],
@@ -78,6 +87,7 @@
       "ObjectExpression": "always",
       "ObjectPattern": "never"
     }],
+    "object-property-newline": "off",
     "object-shorthand": "off",
     "one-var": [0],
     "padded-blocks": 0,
