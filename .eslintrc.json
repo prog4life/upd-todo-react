@@ -39,7 +39,8 @@
     "func-names": ["off", "as-needed"],
     "id-length": "off",
     "indent": ["warn", 2, {
-      "SwitchCase": 1
+      "SwitchCase": 1,
+      "MemberExpression": "off"
     }],
     "linebreak-style": ["off", "unix"],
     "line-comment-position": ["off", { "position": "above" }],

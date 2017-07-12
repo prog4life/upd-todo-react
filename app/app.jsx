@@ -9,13 +9,10 @@ var store = require('configureStore').configure();
 var TodoAPI = require('TodoAPI');
 
 store.subscribe(() => {
-  var state = store.getState();
-  console.log('New state ', state);
-  TodoAPI.setTodos(state.todos);
+  console.log('New state: ', store.getState());
 });
 
-var initialTodos = TodoAPI.getTodos();
-store.dispatch(actions.addTodos(initialTodos));
+store.dispatch(actions.startAddTodos()); // to add todos from firebase to store
 
 // Load foundation
 $(document).foundation();
