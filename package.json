@@ -38,7 +38,7 @@
     "sass-loader": "^3.1.2",
     "script-loader": "^0.6.1",
     "style-loader": "^0.13.0",
-    "webpack": "^1.12.13"
+    "webpack": "^1.15.0"
   },
   "devDependencies": {
     "karma": "^0.13.22",
