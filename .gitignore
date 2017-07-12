@@ -6,7 +6,7 @@ bower_components/
 **/.idea/
 
 # Individual files
-# public/bundle.js
+public/bundle.js
 # .eslintrc.json
 # .eslintignore
 npm-debug.log
