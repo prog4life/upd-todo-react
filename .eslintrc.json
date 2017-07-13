@@ -40,7 +40,7 @@
     "id-length": "off",
     "indent": ["warn", 2, {
       "SwitchCase": 1,
-      "MemberExpression": "off"
+      "MemberExpression": 0
     }],
     "linebreak-style": ["off", "unix"],
     "line-comment-position": ["off", { "position": "above" }],
