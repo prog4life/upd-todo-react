@@ -6,7 +6,7 @@
       "globalReturn": false,
       "impliedStrict": false,
       "jsx": true,
-      "experimentalObjectRestSpread": false
+      "experimentalObjectRestSpread": true
     }
   },
   "env": {
@@ -28,7 +28,7 @@
   },
   "extends": "eslint:all",
   "rules": {
-    "arrow-body-style": [1],
+    "arrow-body-style": ["warn"],
     "arrow-parens": ["warn"],
     "brace-style": ["error", "1tbs", { "allowSingleLine": false }],
     "capitalized-comments": "off",
@@ -42,17 +42,19 @@
       "SwitchCase": 1,
       "MemberExpression": 0
     }],
+    "init-declarations": "warn",
     "linebreak-style": ["off", "unix"],
     "line-comment-position": ["off", { "position": "above" }],
     "max-len": ["off"],
     "max-params": ["warn", 3],
-    "max-statements": [1, 10, { "ignoreTopLevelFunctions": true }],
+    "max-statements": ["warn", 10, { "ignoreTopLevelFunctions": true }],
     "multiline-ternary": "off",
     "newline-after-var": ["warn"],
     "newline-before-return": "off",
-    "no-alert": 1,
-    "no-console": [0],
-    "no-debugger": "off",
+    "newline-per-chained-call": "warn",
+    "no-alert": "warn",
+    "no-console": ["off"],
+    "no-debugger": "error",
     "no-extra-parens": ["error", "all", {
       "conditionalAssign": true,
       "returnAssign": false,
@@ -61,10 +63,13 @@
     }],
     "no-implicit-globals": ["warn"],
     "no-inline-comments": "off",
-    "no-magic-numbers": [0],
+    "no-magic-numbers": ["error", {
+      "ignore": [0, 1],
+      "ignoreArrayIndexes": true
+    }],
     "no-multi-spaces": "warn",
     "no-plusplus": ["off"],
-    "no-process-env": 0,
+    "no-process-env": "off",
     "no-shadow": ["warn", {
       "hoist": "functions",
       "allow": ["err", "error", "cb", "callback"]
@@ -72,14 +77,14 @@
     "no-ternary": "off",
     "no-trailing-spaces": "warn",
     "no-undef": ["error"],
-    "no-undefined": 1,
+    "no-undefined": "warn",
     "no-unused-vars": "warn",
     "no-use-before-define": ["error", {
       "functions": false,
       "classes": true,
       "variables": false  // default: true
     }],
-    "no-var": [0],
+    "no-var": ["off"],
     "no-warning-comments": ["off", {
       "terms": ["todo", "fixme", "xxx"],
       "location": "start"
@@ -89,19 +94,19 @@
       "ObjectPattern": "never"
     }],
     "object-property-newline": "off",
-    "object-shorthand": "off",
-    "one-var": [0],
-    "padded-blocks": 0,
-    "prefer-arrow-callback": "off",
-    "prefer-const": ["off"],
-    "prefer-destructuring": 0,
-    "prefer-template": 1,
-    "quotes": [1, "single", {
+    "object-shorthand": "warn",
+    "one-var": ["off"],
+    "padded-blocks": "off",
+    "prefer-arrow-callback": "warn",
+    "prefer-const": ["warn"],
+    "prefer-destructuring": "off",
+    "prefer-template": "warn",
+    "quotes": ["warn", "single", {
       "avoidEscape": true,
       "allowTemplateLiterals": true
     }],
     "quote-props": ["warn", "as-needed"],
-    "require-jsdoc": [0, {
+    "require-jsdoc": ["off", {
       "require": {
         "FunctionDeclaration": true,
         "MethodDefinition": true,
@@ -109,8 +114,8 @@
         "ArrowFunctionExpression": false
       }
     }],
-    "semi": 2,
-    "sort-imports":"off",
+    "semi": "error",
+    "sort-imports": "warn",
     "sort-keys": "off",
     "space-before-function-paren": ["warn", {
       "anonymous": "always",
