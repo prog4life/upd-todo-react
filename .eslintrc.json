@@ -63,7 +63,7 @@
     }],
     "no-implicit-globals": ["warn"],
     "no-inline-comments": "off",
-    "no-magic-numbers": ["error", {
+    "no-magic-numbers": ["warn", {
       "ignore": [0, 1],
       "ignoreArrayIndexes": true
     }],
@@ -119,7 +119,7 @@
     "sort-keys": "off",
     "space-before-function-paren": ["warn", {
       "anonymous": "always",
-      "named": "never",
+      "named": "always",
       "asyncArrow": "always"
     }],
     "strict": "warn",
