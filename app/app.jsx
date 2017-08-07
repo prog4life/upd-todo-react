@@ -3,10 +3,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {hashHistory} from 'react-router';
 
-import actions from 'actions';
+import * as actions from 'actions';
 import firebase from 'app/firebase/';
 import router from 'app/router/';
-var store = require('configureStore').confugure();
+var store = require('configureStore').configure();
 
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {

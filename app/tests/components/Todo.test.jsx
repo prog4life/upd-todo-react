@@ -15,7 +15,7 @@ describe('Todo', () => {
   it('should dispatch UPDATE_TODO action on click', () => {
     var todoData = {
       id: 199,
-      text: 'Write Todo.text.jsx test',
+      text: 'Write Todo.test.jsx test',
       completed: true
     };
     var action = actions.startToggleTodo(todoData.id, !todoData.completed);
