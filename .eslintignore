@@ -1,4 +1,5 @@
-# Ignore webpack's output "bundle.js" file
-public/bundle.js
+# Ignore webpack's output bundle files
+**/bundle.js
+**/bundle.js.map
 
 npm-debug.log
