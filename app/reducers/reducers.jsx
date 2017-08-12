@@ -30,14 +30,25 @@ export var todosReducer = (state = [], action) => {
             ...todo,
             ...action.updates
           };
-        } else {
-          return todo;
         }
+        return todo;
       });
     case 'ADD_TODOS':
       return [
         ...state,
-        ...action.todos
+        ...action.todos.filter((newTodo) => {
+          const alreadyPresent = state.some((oldTodo) => {
+            if (oldTodo.id === newTodo.id) {
+              return true;
+            }
+            return false;
+          });
+
+          if (alreadyPresent) {
+            return false;
+          }
+          return true;
+        })
       ];
     case 'LOGOUT':
       return [];
