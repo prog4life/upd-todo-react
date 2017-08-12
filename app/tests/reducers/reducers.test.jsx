@@ -90,6 +90,38 @@ describe('Reducers', () => {
       expect(res[0]).toEqual(todos[0]);
     });
 
+    it('should add new todos to existing todos without duplicating', () => {
+      var sameIdTodo = {
+        id: 555,
+        text: 'Not add todo with same id',
+        completed: false,
+        createdAt: 145970097
+      };
+      var newTodo = {
+        id: 111,
+        text: 'anything',
+        completed: false,
+        createdAt: 33000
+      };
+      var todos = [sameIdTodo, newTodo];
+      var action = {
+        type: 'ADD_TODOS',
+        todos
+      };
+      var oldSameIdTodo = {
+        id: 555,
+        text: 'Not replace this todo with same id todo',
+        completed: false,
+        createdAt: 145700077
+      };
+      var oldTodos = [oldSameIdTodo];
+      var res = reducers.todosReducer(df(oldTodos), df(action));
+
+      expect(res.length).toBe(todos.length);
+      expect(res[0]).toEqual(oldSameIdTodo);
+      expect(res[1]).toEqual(newTodo);
+    });
+
     it('should wipe todos on LOGOUT', () => {
       var todos = [
         {
