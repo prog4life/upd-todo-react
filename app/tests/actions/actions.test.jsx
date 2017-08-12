@@ -142,7 +142,7 @@ describe('Actions', () => {
 
     it('should populate todos and dispatch ADD_TODOS', (done) => {
       const store = createMockStore({auth: {uid}});
-      const action = actions.startAddTodos();
+      const action = actions.startGetTodos();
 
       store.dispatch(action).then(() => {
         const mockActions = store.getActions();

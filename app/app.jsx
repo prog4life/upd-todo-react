@@ -11,7 +11,7 @@ var store = require('configureStore').configure();
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
     store.dispatch(actions.login(user.uid));
-    store.dispatch(actions.startAddTodos()); // add @firebase todos to store
+    store.dispatch(actions.startGetTodos()); // add @firebase todos to store
     hashHistory.push('/todos');
   } else {
     store.dispatch(actions.logout());

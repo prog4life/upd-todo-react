@@ -49,7 +49,7 @@ export var addTodos = (todos) => {
   };
 };
 
-export var startAddTodos = () => {
+export var startGetTodos = () => {
   return (dispatch, getState) => {
     var uid = getState().auth.uid;
     var todosRef = firebaseRef.child(`users/${uid}/todos`);
