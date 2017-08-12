@@ -24,7 +24,11 @@ export class Todo extends React.Component {
         dispatch(actions.startToggleTodo(id, !completed));
       }}>
         <div>
-          <input type="checkbox" checked={completed}/>
+          <input
+            type="checkbox"
+            checked={completed}
+            onChange={(e) => e.preventDefault()}
+          />
         </div>
         <div>
           <p>{text}</p>
