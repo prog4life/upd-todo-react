@@ -21,7 +21,9 @@ export class Login extends React.Component {
               <p>
                 Login with GitHub account below.
               </p>
-              <button className="button" onClick={this.onLogin.bind(this)}>Login With GitHub</button>
+              <button className="button" onClick={this.onLogin.bind(this)}>
+                Login With GitHub
+              </button>
             </div>
           </div>
         </div>
